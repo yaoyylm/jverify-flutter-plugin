@@ -40,5 +40,8 @@ android {
 dependencies {
 //    implementation fileTree(include: '*.aar', dir: 'libs')
 //    implementation 'cn.jiguang.sdk:jcore:3.3.0'
-    implementation 'cn.jiguang.sdk:jverification:3.1.9'
+    implementation ('cn.jiguang.sdk:jverification:3.2.5'){
+       exclude group: 'cn.jiguang.sdk', module: 'jcore'//会自动把 jcore 剔除
+    }
+    implementation 'cn.jiguang.sdk:jcore-google:4.7.3'
 }
